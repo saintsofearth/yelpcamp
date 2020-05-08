@@ -47,7 +47,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect("mongodb://localhost:27017/yelecamp", {'useNewUrlParser': true});
+mongoose.connect("mongodb+srv://saintsofearth:l305-S$5905@cluster0-c3zlb.mongodb.net/test?retryWrites=true&w=majority", {'useNewUrlParser': true});
 
 // **************** USING ROUTES ********************
 app.use(authRoutes);
