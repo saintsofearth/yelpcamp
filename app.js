@@ -47,7 +47,9 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect("mongodb+srv://saintsofearth:l305-S$5905@cluster0-c3zlb.mongodb.net/test?retryWrites=true&w=majority", {'useNewUrlParser': true});
+// console.log(process.env.DATABASEURL);
+// My localhost DB url: mongodb://localhost/yelecamp
+mongoose.connect(process.env.DATABASEURL, {'useNewUrlParser': true});
 
 // **************** USING ROUTES ********************
 app.use(authRoutes);
