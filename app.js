@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(session({
-    secret: "apoorv",
+    secret: "*****",
     resave: false,
     saveUninitialized: false
 }));
@@ -47,8 +47,6 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-// console.log(process.env.DATABASEURL);
-// My localhost DB url: mongodb://localhost/yelecamp
 mongoose.connect(process.env.DATABASEURL, {'useNewUrlParser': true});
 
 // **************** USING ROUTES ********************
