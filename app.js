@@ -46,8 +46,7 @@ passport.deserializeUser(User.deserializeUser());
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-
-mongoose.connect(process.env.DATABASEURL, {'useNewUrlParser': true});
+// mongoose.connect
 
 // **************** USING ROUTES ********************
 app.use(authRoutes);
